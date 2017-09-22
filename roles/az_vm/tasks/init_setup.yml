@@ -47,6 +47,5 @@
         destination_port_range: 22
         access: Allow
         priority: 101
-        ccccccgndbefrvhkrrkigtbcddciirkbiclvifcijkbi
         direction: Inbound
 #    register: return_azsubnet
