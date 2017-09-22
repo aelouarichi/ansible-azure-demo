@@ -29,7 +29,7 @@
     virtual_network: "{{ az_virtualnet_name }}"
     subnet: "{{ az_subnet_name }}"
     public_ip_name: "{{ az_public_ip_name }}"
-    security_group: "{{ az_resourcegroup_name }}"
+    security_group: "{{ az_secgroup_name }}"
 
 - name: Create Virtual Machine
   local_action:
