@@ -40,12 +40,13 @@
   local_action:
     module: azure_rm_securitygroup
     resource_group: "{{ az_resourcegroup_name }}"
-     name: "{{ az_secgroup_name }}"
-     rules:
-       - name: SSH
-         protocol: Tcp
-         destination_port_range: 22
-         access: Allow
-         priority: 101
-         direction: Inbound
+    name: "{{ az_secgroup_name }}"
+    rules:
+      - name: SSH
+        protocol: Tcp
+        destination_port_range: 22
+        access: Allow
+        priority: 101
+        ccccccgndbefrvhkrrkigtbcddciirkbiclvifcijkbi
+        direction: Inbound
 #    register: return_azsubnet
