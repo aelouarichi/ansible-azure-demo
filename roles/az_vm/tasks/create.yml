@@ -51,4 +51,4 @@
       purpose: "{{ az_purpose }}"
       customer: "{{ az_customer }}"
       application: "{{ az_application }}"
-    register: return_az_vm
+  register: return_az_vm
