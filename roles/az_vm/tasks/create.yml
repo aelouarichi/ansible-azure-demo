@@ -1,0 +1,31 @@
+---
+- name: Create NIC
+  local_action:
+    module: azure_rm_networkinterface
+    resource_group: {{ az_resourcegroup_name }}
+    name: testnic001
+    virtual_network: testvn001
+    subnet: subnet001
+    public_ip_name: publicip001
+    security_group: secgroup001
+
+- name: Create Virtual Machine
+  local_action:
+    module: azure_rm_virtualmachine
+    resource_group: {{ az_resourcegroup_name }}
+    location: {{ az_location }}
+    name: {{ az_vm_name }}
+    vm_size: {{ az_vm_size }}
+    storage_account_name: {{ }}
+    admin_username: {{ az_vm_admin_user }}
+    admin_password: {{ az_vm_admin_pwd }}
+    ssh_password_enabled: {{ az_ssh_pwd_enabled }}
+    image:
+      offer: {{ az_image_offer }}
+      publisher: {{ az_image_publisher }}
+      sku: {{ az_image_sku }}
+      version: {{ az_image_version
+    tags:
+      purpose: {{ az_purpose }}
+      customer: {{ az_customer }}
+      application: {{ az_application }}
