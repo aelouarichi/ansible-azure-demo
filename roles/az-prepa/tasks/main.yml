@@ -1,6 +1,8 @@
 ---
-- name: Prepare Azure Environment
-- import_playbook: create_rg.yml
-- import_playbook: create_sto_acc.yml
-- import_playbook: create_subnet.yml
-- import_playbook: create_virt_network.yml
+#- name: Prepare Azure Environment
+
+- include: create_rg.yml
+- include: create_sto_acc.yml
+- include: create_virt_network.yml
+- include: create_subnet.yml
+

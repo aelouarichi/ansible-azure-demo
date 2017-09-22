@@ -7,9 +7,9 @@
     location: "{{ az_location }}"
     type: "{{ az_storageaccount_type }}"
     kind: "{{ az_storageaccount_kind }}"
-    access_tier: "{{ az_storageaccount_tier }}"
+#    access_tier: "{{ az_storageaccount_tier }}"
     state: present
     tags:
       purpose: "{{ az_purpose }}"
       customer: "{{ az_customer }}"
-    register: return_azstoaccnt
+#    register: return_azstoaccnt

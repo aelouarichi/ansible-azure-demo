@@ -3,9 +3,11 @@
   local_action:
     module: azure_rm_virtualnetwork
     location: "{{ az_location }}"
-    name: "{{ az_resourcegroup_name }}"
+    resource_group: "{{ az_resourcegroup_name }}"
+    name: "{{ az_virtualnet_name }}"
+    address_prefixes_cidr: "{{ az_cidr_prefix }}"
     state: present
     tags:
       purpose: "{{ az_purpose }}"
       customer: "{{ az_customer }}"
-    register: return_azvirtnet
+#    register: return_azvirtnet

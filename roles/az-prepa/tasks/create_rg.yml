@@ -8,4 +8,4 @@
     tags:
       purpose: "{{ az_purpose }}"
       customer: "{{ az_customer }}"
-    register: return_azrg
+#   register: return_azrg
