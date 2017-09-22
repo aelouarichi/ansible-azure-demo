@@ -1,14 +1,13 @@
 ---
-- name:  Create {{ az_subnet_name }} Subnet on {{ az_region }}
+- name:  Create "{{ az_subnet_name }}" Subnet on "{{ az_region }}"
   local_action:
     module: azure_rm_subnet
-    name: {{ az_subnet_name }}
-    resource_group: {{ az_resourcegroup_name }}
-    virtual_network_name: {{ az_virtualnet_name }}
-    address_prefix_cidr: {{ az_cidr_prefix }}
+    name: "{{ az_subnet_name }}"
+    resource_group: "{{ az_resourcegroup_name }}"
+    virtual_network_name: "{{ az_virtualnet_name }}"
+    address_prefix_cidr: "{{ az_cidr_prefix }}"
     state: present
     tags:
-      purpose: {{ az_purpose }}
-      customer: {{ az_customer }}
+      purpose: "{{ az_purpose }}"
+      customer: "{{ az_customer }}"
     register: return_azsubnet
-    

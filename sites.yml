@@ -1,0 +1,7 @@
+---
+- name: Deploy Application on Azure
+  hosts: local
+  gather_facts: false
+
+  roles:
+    az-prepa
